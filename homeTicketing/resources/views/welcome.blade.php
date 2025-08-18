@@ -8,5 +8,11 @@
 </head>
 <body>
     <h1>hi</h1>
+    <h3>Give us your information</h3>
+    <form action="">
+        <label for=""></label>
+        <input type="text" name="name" placeholder="Name">
+        <input type="submit">
+    </form>
 </body>
 </html>
