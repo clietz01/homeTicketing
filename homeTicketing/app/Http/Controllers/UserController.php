@@ -11,6 +11,16 @@ class UserController extends Controller
 {
     //
 
+    public function showLogin(){
+
+        return view('login');
+    }
+
+    public function showAccountCreation(){
+
+        return view('create_account');
+    }
+
     protected function createUser(Request $request){
 
         //account creation at signup screen
@@ -38,16 +48,6 @@ class UserController extends Controller
 
     }
 
-
-    public function showLogin(){
-
-        return view('login');
-    }
-
-    public function showAccountCreation(){
-
-        return view('create_account');
-    }
 
     public function login(Request $request){
 
