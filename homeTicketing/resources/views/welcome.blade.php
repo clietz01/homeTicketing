@@ -7,12 +7,11 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>hi</h1>
-    <h3>Give us your information</h3>
-    <form action="">
-        <label for=""></label>
-        <input type="text" name="name" placeholder="Name">
-        <input type="submit">
-    </form>
+    <div id="landing-container">
+        <div id="choices">
+            <a href="{{route('show_login')}}"><button>Login</button></a>
+            <a href="{{route('show_account_creation')}}"><button>Create account</button></a>
+        </div>
+    </div>
 </body>
 </html>

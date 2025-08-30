@@ -38,7 +38,18 @@ class UserController extends Controller
 
     }
 
-    protected function login(Request $request){
+
+    public function showLogin(){
+
+        return view('login');
+    }
+
+    public function showAccountCreation(){
+
+        return view('create_account');
+    }
+
+    public function login(Request $request){
 
         $loginCredentials = $request->validate([ //get data from form
             'username' => ['required'],
@@ -61,7 +72,7 @@ class UserController extends Controller
     }
 
 
-    protected function showProfile(){
+    public function showProfile(){
         $user = Auth::user();
 
         return view('profilePage', [
