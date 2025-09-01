@@ -7,7 +7,7 @@
 ## 📁 Repository Structure
 
 - [`/scripts`](./scripts) – All executable or automation scripts.
-- [`/dependencies`](./packages) – Required packages, libraries, or setup instructions.
+- [`/packages`](./packages) – Required packages, libraries, or setup instructions.
 
 ---
 
