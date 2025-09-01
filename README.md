@@ -6,8 +6,8 @@
 
 ## 📁 Repository Structure
 
-- [`/scripts`](./homeTicketing/scripts) – All executable or automation scripts.
-- [`/packages`](./homeTicketing/packages) – Required packages, libraries, or setup instructions.
+- [`/scripts`](./homeTicketing/scripts.md) – All executable or automation scripts.
+- [`/packages`](./homeTicketing/packages.md) – Required packages, libraries, or setup instructions.
 
 ---
 
