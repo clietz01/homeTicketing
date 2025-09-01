@@ -5,6 +5,15 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <div id="form-container">
+        <form action="{{route('create_account')}}">
+            <input type="text" name="username">
+            <label for="username">Username</label>
+            <input type="text" name="password">
+            <label for="password">Password</label>
+            <input type="email" name="email">
+            <label for="email">Email</label>
+        </form>
+    </div>
 </body>
 </html>

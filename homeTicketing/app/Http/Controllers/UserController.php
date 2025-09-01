@@ -27,14 +27,14 @@ class UserController extends Controller
 
         //validate form fields
         $request->validate([
-            'username' => 'required',
+            'name' => 'required',
             'password' => 'required|string|min:8|max:255',
             'email' => 'required|string'
         ]);
 
         $data = $request->input()->all(); //get data from form
         $newuser = User::create([         //create user from User model
-            'username' => $data->username,
+            'name' => $data->name,
             'password' => $data->password,
             'email' => $data->email
         ]);
@@ -43,7 +43,7 @@ class UserController extends Controller
 
         return view('profile',
     
-        ['username' => $newuser->name,]
+        ['name' => $newuser->name,]
     );
 
     }
@@ -51,8 +51,10 @@ class UserController extends Controller
 
     public function login(Request $request){
 
+
+
         $loginCredentials = $request->validate([ //get data from form
-            'username' => ['required'],
+            'name' => ['required'],
             'password' => ['required']
         ]);
 
@@ -64,9 +66,8 @@ class UserController extends Controller
 
         return back()->withErrors([
 
-            'username' => 'No account found with provided username',
-            'password' => 'Provided password does not match provided username'
-        ]);
+            'name' => 'credentials do not match our records.'
+        ])->onlyInput('name');
 
 
     }
@@ -76,7 +77,7 @@ class UserController extends Controller
         $user = Auth::user();
 
         return view('profilePage', [
-            'username' => $user->username
+            'name' => $user->name
         ]);
     }
 }
