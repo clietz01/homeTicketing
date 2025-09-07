@@ -14,12 +14,13 @@ class UserController extends Controller
 
     public function showLogin(){
 
-        return view('login');
+        return Inertia::render('login');
     }
 
     public function showAccountCreation(){
 
-        return view('create_account');
+        return Inertia::render('register');
+        
     }
 
     protected function createUser(Request $request){
